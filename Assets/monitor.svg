@@ -1,0 +1,53 @@
+<svg width="80px" height="80px" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Rim gradient -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b41ff"/>
+      <stop offset="50%" stop-color="#d02e7a"/>
+      <stop offset="100%" stop-color="#ff3e26"/>
+    </linearGradient>
+
+    <!-- Screen glow -->
+    <radialGradient id="screenGlow" cx="55%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#b855ff" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#ff3d7f" stop-opacity="0.7"/>
+      <stop offset="60%" stop-color="#6a0f28" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0b0610" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Stand gradient -->
+    <linearGradient id="standGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#7a2c7f"/>
+      <stop offset="50%" stop-color="#a02c44"/>
+      <stop offset="100%" stop-color="#bf3a25"/>
+    </linearGradient>
+
+    <!-- Power LED -->
+    <radialGradient id="ledGrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffd9e6"/>
+      <stop offset="100%" stop-color="#ff6b89"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outer rim -->
+  <rect x="40" y="20" width="320" height="200" rx="15" ry="15"
+        fill="none" stroke="url(#rimGrad)" stroke-width="6"/>
+
+  <!-- Black bezel (gap between rim and screen) -->
+  <rect x="46" y="26" width="308" height="188" rx="12" ry="12" fill="black"/>
+
+  <!-- Screen -->
+  <rect x="52" y="32" width="296" height="176" rx="10" ry="10" fill="url(#screenGlow)"/>
+
+  <!-- Bezel bottom strip -->
+  <rect x="46" y="200" width="308" height="14" fill="url(#rimGrad)"/>
+
+  <!-- Power LED -->
+  <ellipse cx="200" cy="207" rx="8" ry="5" fill="url(#ledGrad)" />
+
+  <!-- Stand neck -->
+  <rect x="185" y="214" width="30" height="25" rx="5" ry="5" fill="url(#standGrad)"/>
+
+  <!-- Stand base -->
+  <ellipse cx="200" cy="250" rx="80" ry="15" fill="url(#standGrad)"/>
+</svg>
