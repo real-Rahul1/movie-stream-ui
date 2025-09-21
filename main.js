@@ -9,6 +9,7 @@ const rightBtn=document.getElementById('right-scroll');
 const questionBox=document.querySelectorAll('.faq-box>div:nth-child(1)');
 const answerBox=document.querySelectorAll('.faq-box>div:nth-child(2)');
 const plusSign=document.querySelectorAll('.faq-box>div:nth-child(1)>div:nth-child(2)');
+const FixedGetStarted=document.getElementById('FixedGetStarted');
 
 function optionSelect(){
     options.classList.toggle('active');
@@ -82,6 +83,19 @@ function scrolling(element,direction){
     }
 }
 
+function checkFixedGetStarted(){
+    let topScroll=window.scrollY;
+    let minHeight=window.innerWidth*1.4;
+    let maxHeight=window.innerWidth*4.25;
+    
+    if (topScroll>minHeight && topScroll<maxHeight){
+        FixedGetStarted.style.bottom='0';
+    } else {
+        console.log('hello')
+        FixedGetStarted.style.bottom=`-100%`;
+    }
+}
+
 questionBox.forEach((box,questionIndex) => {
 	box.addEventListener('click',function () {
 		
@@ -113,5 +127,7 @@ lang.addEventListener('click',
 
 posterRow.addEventListener('scroll',checkBtns
 );
+
+window.addEventListener('scroll',checkFixedGetStarted);
 
 checkBtns();

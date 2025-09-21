@@ -495,3 +495,30 @@ footer{
     padding-top:60px;
     padding-bottom:25px;
 }
+#FixedGetStarted{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    height:auto;
+    width:87vw;
+    background:linear-gradient(to top,
+                rgba(0,0,0,1) 0%,
+                rgba(0,0,0,1) 70%,
+                rgba(0,0,0,0) 100%
+    );
+    bottom:-100%;
+    left:0;
+    padding:1.5em;
+    transition:bottom 0.5s;
+}
+#FixedGetStarted>div{
+    background:#E50914;
+    color:white;
+    font-weight:1000;
+    text-align:center;
+    font-size:1rem;
+    width:100%;
+    border-radius:5px;
+    padding:0.7em 0;
+}
