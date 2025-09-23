@@ -11,7 +11,7 @@ body{
     padding:0;
 }
 header{
-    height: 80vh;
+    height: max(80vh,550px);
     background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbXzgFpGsabtxRgj3oslubX8lD-abhgduF2lAlau8rFLaNKAMK_57F3Rg&s=10');
     background-position:center center;
     background-size:max(100vw,1200px);
@@ -20,7 +20,7 @@ header{
     
 }
 #img-blur{
-	height:80vh;
+	height:100%;
 	background-color:black;
 	background-color: rgba(0,0,0,0.8);
 }
@@ -290,7 +290,6 @@ main{
 	color: transparent;
 	font-size:40px;
 	font-weight:1000;
-	transition: font-size 0.10s linear;
 }
 #num1::before{
 	content:"1";
@@ -321,7 +320,6 @@ main{
 	color: black;
 	font-size:40px;
 	font-weight:1000;
-	transition: font-size 0.10s linear;
 	left:0px;
 }
 #num1::after{

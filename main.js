@@ -91,7 +91,6 @@ function checkFixedGetStarted(){
     if (topScroll>minHeight && topScroll<maxHeight){
         FixedGetStarted.style.bottom='0';
     } else {
-        console.log('hello')
         FixedGetStarted.style.bottom=`-100%`;
     }
 }
